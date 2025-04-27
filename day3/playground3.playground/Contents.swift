@@ -79,3 +79,54 @@ movie.append("Jhonny Depp")
 movie.remove(at: 2)
 print(movie)
 movie.removeAll()
+
+
+//dictionaries-> key-&-value pairs
+
+var dict0 = ["Aman", "Engineer", "23"]
+
+
+// All of that is valid Swift code, but we’re trying to read dictionary keys that don’t have a value attached to them
+// Swift will even warn you when you write the code, albeit in a rather obscure way – it will say
+//“Expression implicitly coerced from 'String?' to 'Any’”, but it will really mean “this data might not actually be there – are you sure you want to print it?”
+var dict1 = [
+    "name": "Aman",
+    "designation": "Engineer",
+    "age": "23"
+]
+print(dict1["name"])
+print(dict1["age"])
+
+//Swift calls these optionals because the existence of data is optional - it might be there or it might not.
+
+//simple approach when reading from a dictionary-
+print(dict1["name", default:"unknown"])
+print(dict1["age", default:"unknown"])
+
+// will learn how to deal with optionals in further lessons
+
+//we need to write [String: Int] now, to mean a dictionary with strings for its keys and integers for its values.
+
+var flats = [String: Int]() // dictionary with strings for its keys and integers for its values.
+flats["aman"] = 1
+flats["akhil"] = 2
+print(flats)
+
+var roomNo = [String: String]() //dictionary with strings for its keys and strings for its values.
+roomNo["Aman"] = "First Floor"
+roomNo["Akhil"] = "Second Floor"
+print(roomNo)
+
+let planets = [1: "Mercury", 2: "Venus"]
+let venus = planets[2, default: "Planet X"]
+
+let capitals = ["England": "London", "Wales": "Cardiff"]
+let scotlandCapital = capitals["Scotland"]
+
+let results = [
+    "english": 100,
+    "french": 85,
+    "geography": 75
+]
+
+let historyResults = results["history", default:0]

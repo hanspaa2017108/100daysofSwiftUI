@@ -145,3 +145,16 @@ actors2.insert("Tom Cruise")
 // sets are unordered and cannot contain duplicates, whereas arrays retain their order and can contain duplicates.
 // sets stores values in random order which optimizes them for faster retrieval
 // for ques like- "does this item exists" use sets instead of arrays as there are no duplicates and there can be faster lookups
+//ENUMS (enumerations) - we get to list up front the range of values it can have, and Swift will make sure you never make a mistake using them.
+//Behind the scenes, Swift can store its enum values very simply, so they are much faster to create and store than something like a string.
+
+enum holidays {
+    case diwali
+    case holi
+    case janmasthami
+    case christmas
+}
+
+var holidayName = holidays.holi
+holidayName = .diwali
+

@@ -130,3 +130,18 @@ let results = [
 ]
 
 let historyResults = results["history", default:0]
+
+// Sets- they are similar to arrays, except you can’t add duplicate items, and they don’t store their items in a particular order.
+// the set will automatically remove any duplicate values, and it won’t remember the exact order that was used in the array.
+
+let actors = Set(["SRK", "Tom Cruise", "AL Pacino"])
+actors.contains("SRK")
+print(actors)
+
+var actors2 = Set<String>()
+
+actors2.insert("Tom Cruise")
+
+// sets are unordered and cannot contain duplicates, whereas arrays retain their order and can contain duplicates.
+// sets stores values in random order which optimizes them for faster retrieval
+// for ques like- "does this item exists" use sets instead of arrays as there are no duplicates and there can be faster lookups
